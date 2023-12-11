@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Вход</title>
+    <link rel="icon" href="img/fav.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style_form.css">
+    <script src="https://kit.fontawesome.com/fcb05804ff.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-box">
+      <h1 id="title">Регистрация</h1>
+      <form id="main-form" onsubmit="return checkForm(this)">
+        <div class="input-group" id="registrationFields">
+          <div class="input-field" id="nameField">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="nameInput" placeholder="Имя" required>
+          </div>
+          <div class="input-field">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="email" placeholder="Почта" required>
+          </div>
+          <div class="input-field">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" placeholder="Пароль" required>
+          </div>
+          <p>Уже есть аккаунт? <a onclick="switchToSignIn()" href="#">Войти</a></p>
+        </div>
+
+        <div class="input-group" id="signInFields" style="display: none;">
+          <div class="input-field">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="signInEmail" placeholder="Почта" required>
+          </div>
+          <div class="input-field">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="signInPassword" placeholder="Пароль" required>
+          </div>
+          <p>Нет аккаунта? <a onclick="switchToSignUp()" href="#">Зарегистрироваться</a></p>
+        </div>
+
+        <div id="message" style="display: none;"></div> <!-- Новый элемент для отображения сообщений -->
+
+        <button class="submit" type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/index_form.js"></script>
+</body>
+</html>
